@@ -1,0 +1,13 @@
+.users {
+  background: #fff;
+  width: 300px;
+  margin: 50px auto 0 auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.users p {
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  border-radius: 2px;
+}

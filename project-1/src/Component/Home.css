@@ -1,0 +1,121 @@
+* {
+  box-size: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: calc(100vh - 3px);
+  background: #000;
+  display: block;
+  padding: 40px 0 0 0;
+}
+.form-control {
+  background: #fff;
+  width: 300px;
+  margin: auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.form-control label {
+  display: block;
+  width: 300px;
+  color: #000;
+  font-family: arial;
+  padding: 8px 0;
+}
+.form-control input {
+  padding: 0 10px;
+  font-size: 15px;
+  display: block;
+  width: 300px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+.form-control button {
+  display: block;
+  margin: 0;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: #27ae60;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.users {
+  background: #fff;
+  width: 300px;
+  margin: 50px auto 0 auto;
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.users p {
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  border-radius: 2px;
+}
+.model {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 300ms ease-in-out all;
+  background: rgba(214, 94, 136, 0.6);
+}
+.form-model {
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  background: #fff;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+.form-model h2 {
+  background: #27ae60;
+  font-size: 30px;
+  color: #fff;
+  font-family: arial;
+  padding: 15px 18px;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px solid #000;
+}
+.model .form-model p {
+  font-family: arial;
+  color: #000;
+  font-weight: bold;
+  padding: 30px 20px;
+}
+.form-model button {
+  display: block;
+  margin: 0;
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid black;
+  background: #27ae60;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  margin-right: 30px;
+}
+.model.close {
+  max-height: 0;
+  opacity: 0;
+  overflow: none;
+}
+.model.open {
+  max-height: 800px;
+  opacity: 1;
+  overflow: auto;
+}

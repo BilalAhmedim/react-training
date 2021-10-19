@@ -10,12 +10,10 @@ const Form = (props) => {
 
   const saveEnteredNameHandler = (inputName) => {
     setEnteredName(inputName);
-    console.log(inputName);
   };
 
   const saveEnteredAgeHandler = (inputAge) => {
     setEnteredAge(inputAge);
-    console.log(inputAge);
   };
   const enteredDate = {
     Name: enteredName,

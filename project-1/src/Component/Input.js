@@ -6,7 +6,6 @@ const Input = (props) => {
   };
   const inputAgeHandler = (inputAge) => {
     props.onSaveEnteredAge(inputAge.target.value);
-    console.log(inputAge);
   };
   return (
     <div className="form-control">
@@ -22,7 +21,7 @@ const Input = (props) => {
         Age
         <input
           type="text"
-          onchange={inputAgeHandler}
+          onChange={inputAgeHandler}
           value={props.inputDate.Age}
         />
       </label>

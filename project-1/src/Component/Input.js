@@ -7,8 +7,12 @@ const Input = (props) => {
   const inputAgeHandler = (inputAge) => {
     props.onSaveEnteredAge(inputAge.target.value);
   };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    props.onAgeValidation();
+  };
   return (
-    <div className="form-control">
+    <form className="form-control" onSubmit={submitHandler}>
       <label>
         Username
         <input
@@ -20,13 +24,13 @@ const Input = (props) => {
       <label>
         Age
         <input
-          type="text"
+          type="number"
           onChange={inputAgeHandler}
           value={props.inputDate.Age}
         />
       </label>
       <button type="submit">Add User</button>
-    </div>
+    </form>
   );
 };
 

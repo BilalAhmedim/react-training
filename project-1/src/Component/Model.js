@@ -5,7 +5,7 @@ const Model = (props) => {
     <div className="model close">
       <div className="form-model">
         <h2>Invali Input!</h2>
-        <p>Please Enter Valid Input</p>
+        <p>{props.text}</p>
         <button className="model-btn">Close</button>
       </div>
     </div>

@@ -2,7 +2,7 @@ import "./Output.css";
 
 const Output = (props) => {
   return (
-    <div class="users">
+    <div className="users">
       <p>User (Age)</p>
       <p>User (Age)</p>
     </div>

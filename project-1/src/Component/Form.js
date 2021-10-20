@@ -8,6 +8,7 @@ const Form = (props) => {
   const [enteredName, setEnteredName] = useState();
   const [enteredAge, setEnteredAge] = useState();
   const [isValid, setIsValid] = useState(false);
+  const [usersData, setUsersData] = useState([{ Name: "Users 1", Age: 40 }]);
 
   const saveEnteredNameHandler = (inputName) => {
     setEnteredName(inputName);
@@ -21,7 +22,15 @@ const Form = (props) => {
     !isValid ? setIsValid(true) : setIsValid(false);
   };
 
-  const enteredDate = [{ Name: enteredName, Age: enteredAge }];
+  const postUserData = (enteredData) => {
+    setUsersData((presData) => {
+      const updatedData = [...presData];
+      updatedData.unshift({ Name: enteredData.Name, Age: enteredData.Age });
+      return updatedData;
+    });
+  };
+
+  // const enteredDate = [{ Name: enteredName, Age: enteredAge }];
 
   const ageValidationHandler = () => {
     if (enteredAge === undefined || enteredAge < 0) {
@@ -30,6 +39,7 @@ const Form = (props) => {
     console.log(enteredAge);
     console.log(isValid);
   };
+  console.log(usersData);
 
   return (
     <div className="container">
@@ -37,9 +47,10 @@ const Form = (props) => {
         onSaveEnteredName={saveEnteredNameHandler}
         onSaveEnteredAge={saveEnteredAgeHandler}
         onAgeValidation={ageValidationHandler}
-        inputDate={enteredDate}
+        inputData={usersData}
+        postData={postUserData}
       />
-      <Output usersData={enteredDate} />
+      <Output usersData={usersData} />
       <Model onInvalid={isValidStateChanger} isValid={isValid} />
     </div>
   );

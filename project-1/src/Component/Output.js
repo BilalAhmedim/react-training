@@ -6,12 +6,7 @@ const Output = (props) => {
       {userData.Name} (Age {userData.Age})
     </p>
   ));
-  return (
-    <div className="users">
-      <p>User 1 (Age 40)</p>
-      {data}
-    </div>
-  );
+  return <div className="users">{data}</div>;
 };
 
 export default Output;

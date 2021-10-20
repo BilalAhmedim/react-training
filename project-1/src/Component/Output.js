@@ -3,12 +3,12 @@ import "./Output.css";
 const Output = (props) => {
   const data = props.usersData.map((userData) => (
     <p>
-      {userData.Name} ({userData.Age})
+      {userData.Name} (Age {userData.Age})
     </p>
   ));
   return (
     <div className="users">
-      <p>User 1 (40)</p>
+      <p>User 1 (Age 40)</p>
       {data}
     </div>
   );

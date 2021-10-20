@@ -17,15 +17,20 @@ const Form = (props) => {
     setEnteredAge(inputAge);
   };
 
+  const isValidStateChanger = () => {
+    !isValid ? setIsValid(true) : setIsValid(false);
+  };
+
   const enteredDate = [{ Name: enteredName, Age: enteredAge }];
-  let modelMsg = null;
 
   const ageValidationHandler = () => {
-    if (enteredDate.enteredAge > 0) {
-      modelMsg = "Please Enter Age < 0!";
-      setIsValid(true);
+    if (enteredAge === undefined || enteredAge < 0) {
+      isValidStateChanger();
     }
+    console.log(enteredAge);
+    console.log(isValid);
   };
+
   return (
     <div className="container">
       <Input
@@ -35,7 +40,7 @@ const Form = (props) => {
         inputDate={enteredDate}
       />
       <Output usersData={enteredDate} />
-      <Model text={modelMsg} />
+      <Model onInvalid={isValidStateChanger} isValid={isValid} />
     </div>
   );
 };

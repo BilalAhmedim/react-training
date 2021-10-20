@@ -10,6 +10,7 @@ const Input = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     props.onAgeValidation();
+    console.log("clicked");
   };
   return (
     <form className="form-control" onSubmit={submitHandler}>
